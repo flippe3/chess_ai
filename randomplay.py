@@ -1,4 +1,3 @@
-from tokenize import String
 import chess
 import random
 
@@ -9,13 +8,10 @@ class RandomAgent:
 
   def make_move(self, state) -> str:
     board = chess.Board(state)
-    if board.is_game_over() == False: 
-      legal_moves = board.legal_moves.count() 
+    if board.is_game_over() == False:
+      legal_moves = board.legal_moves.count()
       if legal_moves > 0:
-        val = random.randrange(0,legal_moves)
+        val = random.randrange(0, legal_moves)
         move = list(board.legal_moves)[val]
         board.push_uci(str(move))
     return board.fen()
-
-
-  
