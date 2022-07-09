@@ -1,9 +1,9 @@
 from selfplay import SelfPlay
 from randomplay import RandomAgent
-from minimax import MiniMax
+from negamax import NegaMax
 
 ag1 = RandomAgent()
-ag2 = MiniMax()
+ag2 = NegaMax(3)
 
 selfplay = SelfPlay(ag1, ag2)
 

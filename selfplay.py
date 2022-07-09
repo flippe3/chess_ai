@@ -35,6 +35,7 @@ class SelfPlay:
 
       if show_end == True:
         print(self.board)        
+        print()
       # Reset the board
       self.board = chess.Board(self.start_state)
       played += 1
